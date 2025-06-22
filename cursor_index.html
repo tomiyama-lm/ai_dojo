@@ -1,216 +1,884 @@
 <!DOCTYPE html>
 <html lang="ja">
 <head>
-  <meta charset="UTF-8">
-  <title>【実践重視】生成AI活用エンジニア育成カリキュラム</title>
-  <style>
-    body {
-      font-family: sans-serif;
-      line-height: 1.8;
-      max-width: 900px;
-      margin: 0 auto;
-      padding: 2em;
-    }
-    h1, h2, h3 {
-      color: #333;
-    }
-    hr {
-      margin: 2em 0;
-    }
-    section {
-      margin-bottom: 3em;
-    }
-    ul {
-      padding-left: 1.5em;
-    }
-    strong {
-      color: #000;
-    }
-  </style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>生成AI活用エンジニア育成カリキュラム - 3ヶ月で業務に直結するスキルを習得</title>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@300;400;500;700&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Noto Sans JP', sans-serif;
+            line-height: 1.8;
+        }
+        
+        .gradient-bg {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+        }
+        
+        .card-hover {
+            transition: all 0.3s ease;
+        }
+        
+        .card-hover:hover {
+            transform: translateY(-4px);
+            box-shadow: 0 20px 40px rgba(0,0,0,0.1);
+        }
+        
+        .section-number {
+            background: linear-gradient(135deg, #667eea, #764ba2);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+        
+        .pulse-animation {
+            animation: pulse 2s infinite;
+        }
+        
+        @keyframes pulse {
+            0%, 100% { opacity: 1; }
+            50% { opacity: 0.7; }
+        }
+        
+        .fade-in {
+            animation: fadeIn 0.8s ease-out;
+        }
+        
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+        
+        .highlight-box {
+            background: linear-gradient(90deg, rgba(102, 126, 234, 0.1) 0%, rgba(118, 75, 162, 0.1) 100%);
+            border-left: 4px solid #667eea;
+        }
+        
+        .progress-bar {
+            background: linear-gradient(90deg, #667eea, #764ba2);
+            height: 4px;
+            border-radius: 2px;
+        }
+        
+        .icon-circle {
+            background: linear-gradient(135deg, #667eea, #764ba2);
+            color: white;
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0 auto 1rem;
+        }
+        
+        .outcome-badge {
+            background: linear-gradient(135deg, #4facfe, #00f2fe);
+            color: white;
+            padding: 0.5rem 1rem;
+            border-radius: 20px;
+            font-size: 0.9rem;
+            display: inline-block;
+            margin: 0.25rem;
+        }
+        
+        @media print {
+            body { font-size: 12px; }
+            .no-print { display: none; }
+            .card-hover { box-shadow: none; }
+        }
+    </style>
 </head>
-<body>
+<body class="bg-gray-50">
+    <!-- Header -->
+    <header class="gradient-bg text-white py-16">
+        <div class="container mx-auto px-6 text-center">
+            <div class="fade-in">
+                <h1 class="text-5xl font-bold mb-4">
+                    <i class="fas fa-robot mr-4"></i>
+                    生成AI活用エンジニア育成カリキュラム
+                </h1>
+                <p class="text-xl mb-6">3ヶ月・6回で「明日から使える」スキルを習得</p>
+                <div class="highlight-box bg-white bg-opacity-20 rounded-lg p-6 max-w-4xl mx-auto">
+                    <h2 class="text-2xl font-semibold mb-4">
+                        <i class="fas fa-target mr-2"></i>
+                        全体方針：「明日から使える」を最優先
+                    </h2>
+                    <p class="text-lg">実践 → 体験 → 理解 → 応用の流れで、業務に直結するスキルを段階的に身につける</p>
+                </div>
+            </div>
+        </div>
+    </header>
 
-  <h1>【実践重視】生成AI活用エンジニア育成カリキュラム（3ヶ月・6回）</h1>
+    <!-- Main Content -->
+    <main class="container mx-auto px-6 py-12">
+        <!-- Sessions Overview -->
+        <section class="mb-16">
+            <div class="text-center mb-12">
+                <h2 class="text-4xl font-bold text-gray-800 mb-4">カリキュラム概要</h2>
+                <div class="progress-bar w-32 mx-auto"></div>
+            </div>
+            
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- Session 1 -->
+                <div class="card-hover bg-white rounded-xl shadow-lg p-8">
+                    <div class="icon-circle">
+                        <i class="fas fa-code text-xl"></i>
+                    </div>
+                    <h3 class="text-xl font-semibold mb-3 text-center">第1回</h3>
+                    <h4 class="text-lg font-medium mb-4 text-blue-600">Cursor で開発効率3倍アップ</h4>
+                    <p class="text-gray-600 mb-4">明日から使えるCursor活用法をマスターし、開発スピードの向上を体感</p>
+                    <div class="outcome-badge">実践ハンズオン 45分</div>
+                    <div class="outcome-badge">ミニ講義 15分</div>
+                </div>
 
-  <h2>全体方針：「明日から使える」を最優先</h2>
-  <p>実践 → 体験 → 理解 → 応用の流れで、業務に直結するスキルを段階的に身につける</p>
+                <!-- Session 2 -->
+                <div class="card-hover bg-white rounded-xl shadow-lg p-8">
+                    <div class="icon-circle">
+                        <i class="fas fa-comments text-xl"></i>
+                    </div>
+                    <h3 class="text-xl font-semibold mb-3 text-center">第2回</h3>
+                    <h4 class="text-lg font-medium mb-4 text-blue-600">プロンプト実践術</h4>
+                    <p class="text-gray-600 mb-4">「伝え方」で結果が10倍変わる具体的なプロンプト技術を習得</p>
+                    <div class="outcome-badge">実況中継ハンズオン 40分</div>
+                    <div class="outcome-badge">パターン整理 20分</div>
+                </div>
 
-  <hr>
+                <!-- Session 3 -->
+                <div class="card-hover bg-white rounded-xl shadow-lg p-8">
+                    <div class="icon-circle">
+                        <i class="fas fa-link text-xl"></i>
+                    </div>
+                    <h3 class="text-xl font-semibold mb-3 text-center">第3回</h3>
+                    <h4 class="text-lg font-medium mb-4 text-blue-600">AIツール連携でオートメーション</h4>
+                    <p class="text-gray-600 mb-4">複数のAIサービスを組み合わせて複雑な業務タスクを効率化</p>
+                    <div class="outcome-badge">連携実践ワークショップ 50分</div>
+                    <div class="outcome-badge">ツールチェーン設計 10分</div>
+                </div>
 
-  <section>
-    <h2>第1回：Cursor で今すぐ開発効率3倍アップ</h2>
-    <p><strong>目標：</strong>明日から使えるCursor活用法をマスターし、開発スピードの向上を体感する</p>
+                <!-- Session 4 -->
+                <div class="card-hover bg-white rounded-xl shadow-lg p-8">
+                    <div class="icon-circle">
+                        <i class="fas fa-brain text-xl"></i>
+                    </div>
+                    <h3 class="text-xl font-semibold mb-3 text-center">第4回</h3>
+                    <h4 class="text-lg font-medium mb-4 text-blue-600">AIの仕組み理解で使い方が変わる</h4>
+                    <p class="text-gray-600 mb-4">実践で感じた「なぜ？」を理論で理解し、より効果的な活用法を習得</p>
+                    <div class="outcome-badge">体験ベース理論学習 30分</div>
+                    <div class="outcome-badge">理論を活かした実践 30分</div>
+                </div>
 
-    <h3>実践ハンズオン（45分）</h3>
-    <ul>
-      <li><strong>5分で体感する開発効率化</strong>
-        <ul>
-          <li>Todoリストコンポーネントを従来方法とCursorで比較作成</li>
-          <li>「え、こんなに早くできるの？」を全員で体験</li>
-        </ul>
-      </li>
-      <li><strong>業務でよくある場面での活用</strong>
-        <ul>
-          <li>バグ修正、機能追加、リファクタリング、API連携</li>
-        </ul>
-      </li>
-      <li><strong>Cursor基本操作の実習</strong>
-        <ul>
-          <li>Ctrl+K（Inline edit）、Chat、@ファイル指定</li>
-        </ul>
-      </li>
-    </ul>
+                <!-- Session 5 -->
+                <div class="card-hover bg-white rounded-xl shadow-lg p-8">
+                    <div class="icon-circle">
+                        <i class="fas fa-project-diagram text-xl"></i>
+                    </div>
+                    <h3 class="text-xl font-semibold mb-3 text-center">第5回</h3>
+                    <h4 class="text-lg font-medium mb-4 text-blue-600">実プロジェクトでAI活用マスター</h4>
+                    <p class="text-gray-600 mb-4">実際の開発プロジェクトの全工程でAIを活用し、統合的なスキルを習得</p>
+                    <div class="outcome-badge">本格プロジェクト実習 55分</div>
+                    <div class="outcome-badge">発表と振り返り 5分</div>
+                </div>
 
-    <h3>ミニ講義（15分）</h3>
-    <ul>
-      <li><strong>なぜこんなに便利なのか</strong>
-        <ul>
-          <li>Cursorの仕組み、コード理解、他ツールとの違い</li>
-        </ul>
-      </li>
-    </ul>
+                <!-- Session 6 -->
+                <div class="card-hover bg-white rounded-xl shadow-lg p-8">
+                    <div class="icon-circle">
+                        <i class="fas fa-users text-xl"></i>
+                    </div>
+                    <h3 class="text-xl font-semibold mb-3 text-center">第6回</h3>
+                    <h4 class="text-lg font-medium mb-4 text-blue-600">チーム・会社レベルでのAI活用戦略</h4>
+                    <p class="text-gray-600 mb-4">個人レベルから組織レベルへ、AI活用を拡大する具体的プランを作成</p>
+                    <div class="outcome-badge">現状分析と課題整理 20分</div>
+                    <div class="outcome-badge">活用企画書作成 30分</div>
+                </div>
+            </div>
+        </section>
 
-    <h3>今日の成果と明日への活用</h3>
-    <ul>
-      <li>「明日やってみたいこと」を決める</li>
-      <li>業務コードで活用チャレンジ</li>
-    </ul>
-  </section>
+        <!-- Detailed Sessions -->
+        <section class="mb-16">
+            <div class="text-center mb-12">
+                <h2 class="text-4xl font-bold text-gray-800 mb-4">各回の詳細内容</h2>
+                <div class="progress-bar w-32 mx-auto"></div>
+            </div>
 
-  <section>
-    <h2>第2回：「伝え方」で結果が10倍変わる プロンプト実践術</h2>
-    <p><strong>目標：</strong>具体的な業務シーンでのプロンプト技術を身につけ、AIから期待する答えを引き出せるようになる</p>
+            <!-- Session 1 Detail -->
+            <div class="bg-white rounded-xl shadow-lg p-8 mb-8 fade-in">
+                <div class="flex items-center mb-6">
+                    <span class="section-number text-6xl font-bold mr-6">01</span>
+                    <div>
+                        <h3 class="text-3xl font-bold text-gray-800">Cursor で今すぐ開発効率3倍アップ</h3>
+                        <p class="text-xl text-blue-600 mt-2">目標：明日から使えるCursor活用法をマスターし、開発スピードの向上を体感する</p>
+                    </div>
+                </div>
 
-    <h3>実況中継ハンズオン（40分）</h3>
-    <ul>
-      <li><strong>Before/After で体感する差</strong></li>
-      <li><strong>業務シーン別プロンプト実践</strong>
-        <ul>
-          <li>コードレビュー、エラー解決、設計相談、テストコード作成</li>
-        </ul>
-      </li>
-      <li><strong>リアルタイム改善実習</strong></li>
-    </ul>
+                <div class="grid grid-cols-1 lg:grid-cols-2 gap-8">
+                    <div class="highlight-box p-6 rounded-lg">
+                        <h4 class="text-xl font-semibold mb-4 flex items-center">
+                            <i class="fas fa-hands-helping mr-2 text-blue-600"></i>
+                            実践ハンズオン（45分）
+                        </h4>
+                        <ul class="space-y-3">
+                            <li class="flex items-start">
+                                <i class="fas fa-bolt text-yellow-500 mr-2 mt-1"></i>
+                                <div>
+                                    <strong>5分で体感する開発効率化</strong>
+                                    <p class="text-gray-600">簡単なTodoリストコンポーネントを従来方法とCursorで比較作成</p>
+                                </div>
+                            </li>
+                            <li class="flex items-start">
+                                <i class="fas fa-briefcase text-green-500 mr-2 mt-1"></i>
+                                <div>
+                                    <strong>業務でよくある場面での活用</strong>
+                                    <p class="text-gray-600">バグ修正、機能追加、リファクタリング、API連携の実践</p>
+                                </div>
+                            </li>
+                            <li class="flex items-start">
+                                <i class="fas fa-keyboard text-purple-500 mr-2 mt-1"></i>
+                                <div>
+                                    <strong>Cursor基本操作の実習</strong>
+                                    <p class="text-gray-600">Ctrl+K（Inline edit）、Chat、@ファイル指定の活用</p>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
 
-    <h3>パターン整理（20分）</h3>
-    <ul>
-      <li>効果的なプロンプトの共通パターン</li>
-    </ul>
+                    <div class="highlight-box p-6 rounded-lg">
+                        <h4 class="text-xl font-semibold mb-4 flex items-center">
+                            <i class="fas fa-graduation-cap mr-2 text-blue-600"></i>
+                            ミニ講義（15分）
+                        </h4>
+                        <ul class="space-y-3">
+                            <li class="flex items-start">
+                                <i class="fas fa-question-circle text-blue-500 mr-2 mt-1"></i>
+                                <span>なぜこんなに便利なのか</span>
+                            </li>
+                            <li class="flex items-start">
+                                <i class="fas fa-cog text-gray-500 mr-2 mt-1"></i>
+                                <span>Cursorが普通のエディタと違う理由</span>
+                            </li>
+                            <li class="flex items-start">
+                                <i class="fas fa-brain text-pink-500 mr-2 mt-1"></i>
+                                <span>コード理解の仕組み（簡単に）</span>
+                            </li>
+                            <li class="flex items-start">
+                                <i class="fas fa-balance-scale text-orange-500 mr-2 mt-1"></i>
+                                <span>他のAIツールとの使い分け</span>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
 
-    <h3>自分用テンプレート作成</h3>
-    <ul>
-      <li>テンプレートを3個作成、チームで共有</li>
-    </ul>
-  </section>
+                <div class="mt-6 p-4 bg-yellow-50 rounded-lg border-l-4 border-yellow-400">
+                    <h5 class="font-semibold text-yellow-800 mb-2">今日の成果と明日への活用</h5>
+                    <p class="text-yellow-700">参加者全員が「明日やってみたいこと」を1つ決め、実際の業務コードでの活用チャレンジを設定</p>
+                </div>
+            </div>
 
-  <section>
-    <h2>第3回：複数AIツール連携で業務をフルオートメーション化</h2>
-    <p><strong>目標：</strong>複数のAIサービスを組み合わせて、複雑な業務タスクを効率化する</p>
+            <!-- Session 2 Detail -->
+            <div class="bg-white rounded-xl shadow-lg p-8 mb-8 fade-in">
+                <div class="flex items-center mb-6">
+                    <span class="section-number text-6xl font-bold mr-6">02</span>
+                    <div>
+                        <h3 class="text-3xl font-bold text-gray-800">「伝え方」で結果が10倍変わる プロンプト実践術</h3>
+                        <p class="text-xl text-blue-600 mt-2">目標：具体的な業務シーンでのプロンプト技術を身につけ、AIから期待する答えを引き出せるようになる</p>
+                    </div>
+                </div>
 
-    <h3>連携実践ワークショップ（50分）</h3>
-    <ul>
-      <li>画像からコード生成、ドキュメント作業の自動化、チーム開発での活用、API活用の基礎</li>
-    </ul>
+                <div class="grid grid-cols-1 lg:grid-cols-2 gap-8">
+                    <div class="highlight-box p-6 rounded-lg">
+                        <h4 class="text-xl font-semibold mb-4 flex items-center">
+                            <i class="fas fa-microphone mr-2 text-blue-600"></i>
+                            実況中継ハンズオン（40分）
+                        </h4>
+                        <ul class="space-y-3">
+                            <li class="flex items-start">
+                                <i class="fas fa-before text-red-500 mr-2 mt-1"></i>
+                                <div>
+                                    <strong>Before/After で体感する差</strong>
+                                    <p class="text-gray-600">悪いプロンプト vs 良いプロンプトの実際の違いを体験</p>
+                                </div>
+                            </li>
+                            <li class="flex items-start">
+                                <i class="fas fa-scenarios text-green-500 mr-2 mt-1"></i>
+                                <div>
+                                    <strong>業務シーン別プロンプト実践</strong>
+                                    <div class="mt-2 space-y-1 text-sm text-gray-600">
+                                        <p>• コードレビュー依頼</p>
+                                        <p>• エラー解決</p>
+                                        <p>• 設計相談</p>
+                                        <p>• テストコード作成</p>
+                                    </div>
+                                </div>
+                            </li>
+                            <li class="flex items-start">
+                                <i class="fas fa-real-time text-purple-500 mr-2 mt-1"></i>
+                                <div>
+                                    <strong>リアルタイム改善実習</strong>
+                                    <p class="text-gray-600">参加者の実際の課題を持ち寄り、その場でプロンプトを改善</p>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
 
-    <h3>ツールチェーン設計（10分）</h3>
-    <ul>
-      <li>自分の業務の中で自動化できそうなワークフローを設計</li>
-    </ul>
-  </section>
+                    <div class="highlight-box p-6 rounded-lg">
+                        <h4 class="text-xl font-semibold mb-4 flex items-center">
+                            <i class="fas fa-pattern mr-2 text-blue-600"></i>
+                            パターン整理（20分）
+                        </h4>
+                        <ul class="space-y-3">
+                            <li class="flex items-start">
+                                <i class="fas fa-check-circle text-green-500 mr-2 mt-1"></i>
+                                <div>
+                                    <strong>効果的なプロンプトの共通パターン</strong>
+                                    <div class="mt-2 space-y-1 text-sm text-gray-600">
+                                        <p>• 役割設定、制約条件、出力形式の指定方法</p>
+                                        <p>• 具体例の提示（Few-shot）の使い方</p>
+                                        <p>• 段階的な質問の組み立て方</p>
+                                    </div>
+                                </div>
+                            </li>
+                        </ul>
 
-  <section>
-    <h2>第4回：なぜAIがこんなに賢いのか？仕組み理解で使い方が変わる</h2>
-    <p><strong>目標：</strong>実践で感じた「なぜ？」を理論で理解し、より効果的な活用法を身につける</p>
+                        <div class="mt-4 p-3 bg-blue-50 rounded-lg">
+                            <h5 class="font-semibold text-blue-800 mb-2">自分用テンプレート作成</h5>
+                            <p class="text-blue-700 text-sm">各自の業務でよく使うプロンプトテンプレートを3個作成し、チーム内で共有</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
 
-    <h3>体験ベース理論学習（30分）</h3>
-    <ul>
-      <li>LLMの仕組み、各AIサービスの特徴</li>
-    </ul>
+            <!-- Session 3 Detail -->
+            <div class="bg-white rounded-xl shadow-lg p-8 mb-8 fade-in">
+                <div class="flex items-center mb-6">
+                    <span class="section-number text-6xl font-bold mr-6">03</span>
+                    <div>
+                        <h3 class="text-3xl font-bold text-gray-800">複数AIツール連携で業務をフルオートメーション化</h3>
+                        <p class="text-xl text-blue-600 mt-2">目標：複数のAIサービスを組み合わせて、複雑な業務タスクを効率化する</p>
+                    </div>
+                </div>
 
-    <h3>理論を活かした実践（30分）</h3>
-    <ul>
-      <li>理解に基づくプロンプト改善、AIの限界と対策</li>
-    </ul>
+                <div class="highlight-box p-6 rounded-lg mb-6">
+                    <h4 class="text-xl font-semibold mb-4 flex items-center">
+                        <i class="fas fa-workshop mr-2 text-blue-600"></i>
+                        連携実践ワークショップ（50分）
+                    </h4>
+                    
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                        <div class="space-y-4">
+                            <div class="p-4 bg-gradient-to-r from-purple-50 to-pink-50 rounded-lg">
+                                <h5 class="font-semibold text-purple-800 mb-2 flex items-center">
+                                    <i class="fas fa-image mr-2"></i>
+                                    画像からコードを生成する流れ
+                                </h5>
+                                <p class="text-sm text-purple-700">手書きモックアップ → Geminiで解析 → Cursorで実装</p>
+                            </div>
+                            
+                            <div class="p-4 bg-gradient-to-r from-green-50 to-blue-50 rounded-lg">
+                                <h5 class="font-semibold text-green-800 mb-2 flex items-center">
+                                    <i class="fas fa-file-alt mr-2"></i>
+                                    ドキュメント作業の自動化
+                                </h5>
+                                <p class="text-sm text-green-700">仕様書PDF → 要約作成 → 実装タスクの洗い出し</p>
+                            </div>
+                        </div>
+                        
+                        <div class="space-y-4">
+                            <div class="p-4 bg-gradient-to-r from-yellow-50 to-orange-50 rounded-lg">
+                                <h5 class="font-semibold text-yellow-800 mb-2 flex items-center">
+                                    <i class="fas fa-users mr-2"></i>
+                                    チーム開発での活用
+                                </h5>
+                                <p class="text-sm text-yellow-700">GitHub Issue → 技術調査 → 実装方針提案</p>
+                            </div>
+                            
+                            <div class="p-4 bg-gradient-to-r from-indigo-50 to-purple-50 rounded-lg">
+                                <h5 class="font-semibold text-indigo-800 mb-2 flex items-center">
+                                    <i class="fas fa-plug mr-2"></i>
+                                    API活用の基礎
+                                </h5>
+                                <p class="text-sm text-indigo-700">ChatGPT API、Claude APIの簡単な使い方</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
 
-    <h3>応用課題</h3>
-    <ul>
-      <li>第2回のプロンプトを理論を元に改良</li>
-    </ul>
-  </section>
+                <div class="p-4 bg-green-50 rounded-lg border-l-4 border-green-400">
+                    <h5 class="font-semibold text-green-800 mb-2">ツールチェーン設計（10分）</h5>
+                    <p class="text-green-700">自分の業務の中で「この流れを自動化できそう」なワークフローを1つ設計し、次回までに実際に試してもらう</p>
+                </div>
+            </div>
 
-  <section>
-    <h2>第5回：実プロジェクトでAI活用を完全マスター</h2>
-    <p><strong>目標：</strong>実際の開発プロジェクトの全工程でAIを活用し、統合的なスキルを身につける</p>
+            <!-- Session 4 Detail -->
+            <div class="bg-white rounded-xl shadow-lg p-8 mb-8 fade-in">
+                <div class="flex items-center mb-6">
+                    <span class="section-number text-6xl font-bold mr-6">04</span>
+                    <div>
+                        <h3 class="text-3xl font-bold text-gray-800">なぜAIがこんなに賢いのか？仕組み理解で使い方が変わる</h3>
+                        <p class="text-xl text-blue-600 mt-2">目標：実践で感じた「なぜ？」を理論で理解し、より効果的な活用法を身につける</p>
+                    </div>
+                </div>
 
-    <h3>本格プロジェクト実習（55分）</h3>
-    <ul>
-      <li>社内ツール開発をペアで進行、全工程にAI活用</li>
-    </ul>
+                <div class="grid grid-cols-1 lg:grid-cols-2 gap-8">
+                    <div class="highlight-box p-6 rounded-lg">
+                        <h4 class="text-xl font-semibold mb-4 flex items-center">
+                            <i class="fas fa-lightbulb mr-2 text-blue-600"></i>
+                            体験ベース理論学習（30分）
+                        </h4>
+                        
+                        <div class="space-y-4">
+                            <div class="p-3 bg-yellow-50 rounded border-l-3 border-yellow-400">
+                                <h6 class="font-semibold text-yellow-800">これまでの実践を振り返りながら</h6>
+                                <ul class="text-sm text-yellow-700 mt-2 space-y-1">
+                                    <li>• なぜCursorはコードの文脈を理解できるの？</li>
+                                    <li>• なぜプロンプトによって回答の質が変わるの？</li>
+                                    <li>• なぜ同じ質問でも回答が毎回違うの？</li>
+                                </ul>
+                            </div>
+                            
+                            <div class="p-3 bg-blue-50 rounded border-l-3 border-blue-400">
+                                <h6 class="font-semibold text-blue-800">LLMの基本の仕組み</h6>
+                                <ul class="text-sm text-blue-700 mt-2 space-y-1">
+                                    <li>• トークン化：AIが文章をどう理解しているか</li>
+                                    <li>• 文脈理解：なぜ長い会話ができるのか</li>
+                                    <li>• 確率的生成：なぜ時々間違えるのか</li>
+                                </ul>
+                            </div>
+                            
+                            <div class="p-3 bg-green-50 rounded border-l-3 border-green-400">
+                                <h6 class="font-semibold text-green-800">各AIサービスの特徴と使い分け</h6>
+                                <ul class="text-sm text-green-700 mt-2 space-y-1">
+                                    <li>• GPT-4：汎用性の高さ</li>
+                                    <li>• Claude：長文処理・分析が得意</li>
+                                    <li>• Gemini：多言語・リアルタイム情報</li>
+                                    <li>• GitHub Copilot：コード特化</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
 
-    <h3>発表と振り返り（5分）</h3>
-    <ul>
-      <li>最も効果的だった活用、苦手だった場面の共有</li>
-    </ul>
-  </section>
+                    <div class="highlight-box p-6 rounded-lg">
+                        <h4 class="text-xl font-semibold mb-4 flex items-center">
+                            <i class="fas fa-cogs mr-2 text-blue-600"></i>
+                            理論を活かした実践（30分）
+                        </h4>
+                        
+                        <div class="space-y-4">
+                            <div class="p-3 bg-purple-50 rounded border-l-3 border-purple-400">
+                                <h6 class="font-semibold text-purple-800">理解に基づく活用方法の改善</h6>
+                                <ul class="text-sm text-purple-700 mt-2 space-y-1">
+                                    <li>• コンテキスト長を意識したプロンプト設計</li>
+                                    <li>• 温度パラメータの調整（創造性 vs 正確性）</li>
+                                    <li>• トークン制限を考慮した効率的な質問方法</li>
+                                </ul>
+                            </div>
+                            
+                            <div class="p-3 bg-red-50 rounded border-l-3 border-red-400">
+                                <h6 class="font-semibold text-red-800">AIの限界と対策</h6>
+                                <ul class="text-sm text-red-700 mt-2 space-y-1">
+                                    <li>• ハルシネーション（幻覚）への対処法</li>
+                                    <li>• 古い情報への対策</li>
+                                    <li>• セキュリティ・プライバシーの注意点</li>
+                                </ul>
+                            </div>
+                        </div>
 
-  <section>
-    <h2>第6回：チーム・会社レベルでのAI活用戦略立案</h2>
-    <p><strong>目標：</strong>個人レベルから組織レベルへ、AI活用を拡大する具体的プランを作成する</p>
+                        <div class="mt-4 p-3 bg-indigo-50 rounded-lg">
+                            <h5 class="font-semibold text-indigo-800 mb-2">応用課題</h5>
+                            <p class="text-indigo-700 text-sm">理論を踏まえて、第2回で作ったプロンプトテンプレートを改良</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
 
-    <h3>現状分析と課題整理（20分）</h3>
-    <ul>
-      <li>自社の開発フロー、課題、AI適用ポテンシャル</li>
-    </ul>
+            <!-- Session 5 Detail -->
+            <div class="bg-white rounded-xl shadow-lg p-8 mb-8 fade-in">
+                <div class="flex items-center mb-6">
+                    <span class="section-number text-6xl font-bold mr-6">05</span>
+                    <div>
+                        <h3 class="text-3xl font-bold text-gray-800">実プロジェクトでAI活用を完全マスター</h3>
+                        <p class="text-xl text-blue-600 mt-2">目標：実際の開発プロジェクトの全工程でAIを活用し、統合的なスキルを身につける</p>
+                    </div>
+                </div>
 
-    <h3>活用企画書作成（30分）</h3>
-    <ul>
-      <li>短期〜長期の導入計画、具体的施策</li>
-    </ul>
+                <div class="highlight-box p-6 rounded-lg mb-6">
+                    <h4 class="text-xl font-semibold mb-4 flex items-center">
+                        <i class="fas fa-project-diagram mr-2 text-blue-600"></i>
+                        本格プロジェクト実習（55分）
+                    </h4>
+                    
+                    <div class="mb-4 p-4 bg-gradient-to-r from-indigo-50 to-blue-50 rounded-lg">
+                        <h5 class="font-semibold text-indigo-800 mb-2">プロジェクト題材：「社内ツール開発」</h5>
+                        <p class="text-indigo-700 text-sm">勤怠管理、在庫管理、予約システムなど実用的なテーマから選択</p>
+                        <p class="text-indigo-700 text-sm">ペア開発（2-3名チーム）で進行</p>
+                    </div>
+                    
+                    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
+                        <div class="p-3 bg-green-50 rounded-lg text-center">
+                            <div class="text-2xl font-bold text-green-600 mb-1">10分</div>
+                            <div class="text-sm font-semibold text-green-800">要件定義</div>
+                            <div class="text-xs text-green-700">ユーザーストーリー作成をAI支援</div>
+                        </div>
+                        
+                        <div class="p-3 bg-blue-50 rounded-lg text-center">
+                            <div class="text-2xl font-bold text-blue-600 mb-1">10分</div>
+                            <div class="text-sm font-semibold text-blue-800">技術選定・設計</div>
+                            <div class="text-xs text-blue-700">アーキテクチャ相談</div>
+                        </div>
+                        
+                        <div class="p-3 bg-purple-50 rounded-lg text-center">
+                            <div class="text-2xl font-bold text-purple-600 mb-1">25分</div>
+                            <div class="text-sm font-semibold text-purple-800">実装</div>
+                            <div class="text-xs text-purple-700">Cursorメインでの開発</div>
+                        </div>
+                        
+                        <div class="p-3 bg-yellow-50 rounded-lg text-center">
+                            <div class="text-2xl font-bold text-yellow-600 mb-1">5分</div>
+                            <div class="text-sm font-semibold text-yellow-800">テスト</div>
+                            <div class="text-xs text-yellow-700">テストケース生成と実装</div>
+                        </div>
+                        
+                        <div class="p-3 bg-pink-50 rounded-lg text-center">
+                            <div class="text-2xl font-bold text-pink-600 mb-1">5分</div>
+                            <div class="text-sm font-semibold text-pink-800">ドキュメント</div>
+                            <div class="text-xs text-pink-700">README、仕様書作成</div>
+                        </div>
+                        
+                        <div class="p-3 bg-gray-50 rounded-lg text-center">
+                            <div class="text-2xl font-bold text-gray-600 mb-1">随時</div>
+                            <div class="text-sm font-semibold text-gray-800">リアルタイム改善</div>
+                            <div class="text-xs text-gray-700">詰まったらその場で解決</div>
+                        </div>
+                    </div>
+                </div>
 
-    <h3>企画発表会（10分）</h3>
-    <ul>
-      <li>各自2分プレゼン、フィードバックと実行設定</li>
-    </ul>
-  </section>
+                <div class="p-4 bg-orange-50 rounded-lg border-l-4 border-orange-400">
+                    <h5 class="font-semibold text-orange-800 mb-2">発表と振り返り（5分）</h5>
+                    <p class="text-orange-700">各チームが「最も効果的だったAI活用」を1つ発表し、「こんな場面ではAIが苦手だった」を共有</p>
+                </div>
+            </div>
 
-  <section>
-    <h2>毎回共通の進行</h2>
-    <ul>
-      <li><strong>冒頭チェックイン（5分）</strong>：前回の実践共有</li>
-      <li><strong>終了時のアクション設定（5分）</strong>：「明日やること」の決定と課題設定</li>
-    </ul>
-  </section>
+            <!-- Session 6 Detail -->
+            <div class="bg-white rounded-xl shadow-lg p-8 mb-8 fade-in">
+                <div class="flex items-center mb-6">
+                    <span class="section-number text-6xl font-bold mr-6">06</span>
+                    <div>
+                        <h3 class="text-3xl font-bold text-gray-800">チーム・会社レベルでのAI活用戦略立案</h3>
+                        <p class="text-xl text-blue-600 mt-2">目標：個人レベルから組織レベルへ、AI活用を拡大する具体的プランを作成する</p>
+                    </div>
+                </div>
 
-  <section>
-    <h2>実践成果の測定方法</h2>
-    <h3>定量的指標</h3>
-    <ul>
-      <li>タスク実行時間、AI使用頻度、新機能開発スピード</li>
-    </ul>
+                <div class="grid grid-cols-1 lg:grid-cols-2 gap-8">
+                    <div class="highlight-box p-6 rounded-lg">
+                        <h4 class="text-xl font-semibold mb-4 flex items-center">
+                            <i class="fas fa-search mr-2 text-blue-600"></i>
+                            現状分析と課題整理（20分）
+                        </h4>
+                        
+                        <div class="space-y-4">
+                            <div class="p-3 bg-blue-50 rounded border-l-3 border-blue-400">
+                                <h6 class="font-semibold text-blue-800">自社の開発プロセス分析</h6>
+                                <ul class="text-sm text-blue-700 mt-2 space-y-1">
+                                    <li>• 現在の開発フロー</li>
+                                    <li>• 時間のかかっている作業</li>
+                                    <li>• チームで共通して困っていること</li>
+                                </ul>
+                            </div>
+                            
+                            <div class="p-3 bg-green-50 rounded border-l-3 border-green-400">
+                                <h6 class="font-semibold text-green-800">AI活用ポテンシャル評価</h6>
+                                <ul class="text-sm text-green-700 mt-2 space-y-1">
+                                    <li>• どの作業がAIで効率化できそうか</li>
+                                    <li>• 導入時の障壁は何か</li>
+                                    <li>• 期待できる効果の試算</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
 
-    <h3>定性的指標</h3>
-    <ul>
-      <li>発想の変化、学習意欲、チーム共有の増加</li>
-    </ul>
+                    <div class="highlight-box p-6 rounded-lg">
+                        <h4 class="text-xl font-semibold mb-4 flex items-center">
+                            <i class="fas fa-clipboard-list mr-2 text-blue-600"></i>
+                            活用企画書作成（30分）
+                        </h4>
+                        
+                        <div class="space-y-4">
+                            <div class="p-3 bg-purple-50 rounded border-l-3 border-purple-400">
+                                <h6 class="font-semibold text-purple-800">3ヶ月・6ヶ月・1年計画の策定</h6>
+                                <ul class="text-sm text-purple-700 mt-2 space-y-1">
+                                    <li>• 短期：個人スキル向上、ツール導入</li>
+                                    <li>• 中期：チームでのベストプラクティス確立</li>
+                                    <li>• 長期：開発プロセス全体の変革</li>
+                                </ul>
+                            </div>
+                            
+                            <div class="p-3 bg-yellow-50 rounded border-l-3 border-yellow-400">
+                                <h6 class="font-semibold text-yellow-800">具体的施策の検討</h6>
+                                <ul class="text-sm text-yellow-700 mt-2 space-y-1">
+                                    <li>• チーム内勉強会の企画</li>
+                                    <li>• AIツール導入のロードマップ</li>
+                                    <li>• 効果測定の方法</li>
+                                    <li>• セキュリティ・コンプライアンス対応</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
 
-    <h3>継続学習のサポート</h3>
-    <ul>
-      <li>月1フォローアップ、Slack共有、最新情報キャッチアップ法</li>
-    </ul>
-  </section>
+                <div class="mt-6 p-4 bg-indigo-50 rounded-lg border-l-4 border-indigo-400">
+                    <h5 class="font-semibold text-indigo-800 mb-2">企画発表会（10分）</h5>
+                    <p class="text-indigo-700">1人2分で活用企画をプレゼン、相互フィードバックとアイデア交換、実行に向けたコミット設定</p>
+                </div>
+            </div>
+        </section>
 
-  <section>
-    <h2>期待される成果</h2>
-    <h3>3ヶ月後の姿</h3>
-    <ul>
-      <li>業務の30〜50%でAI活用、プロンプトスキル向上、AIツール習得力</li>
-    </ul>
+        <!-- Common Process -->
+        <section class="mb-16">
+            <div class="text-center mb-12">
+                <h2 class="text-4xl font-bold text-gray-800 mb-4">毎回共通の進行</h2>
+                <div class="progress-bar w-32 mx-auto"></div>
+            </div>
 
-    <h3>組織への波及効果</h3>
-    <ul>
-      <li>開発生産性、課題解決力、AI活用意識の向上</li>
-    </ul>
-  </section>
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                <div class="bg-white rounded-xl shadow-lg p-8 card-hover">
+                    <div class="icon-circle bg-gradient-to-r from-green-400 to-blue-500">
+                        <i class="fas fa-play text-xl"></i>
+                    </div>
+                    <h3 class="text-xl font-semibold mb-4 text-center">冒頭チェックイン（5分）</h3>
+                    <ul class="space-y-2">
+                        <li class="flex items-start">
+                            <i class="fas fa-check-circle text-green-500 mr-2 mt-1"></i>
+                            <span>前回の学習内容を業務で使ってみた結果共有</span>
+                        </li>
+                        <li class="flex items-start">
+                            <i class="fas fa-exclamation-triangle text-yellow-500 mr-2 mt-1"></i>
+                            <span>困ったこと、うまくいったことの報告</span>
+                        </li>
+                    </ul>
+                </div>
 
+                <div class="bg-white rounded-xl shadow-lg p-8 card-hover">
+                    <div class="icon-circle bg-gradient-to-r from-purple-400 to-pink-500">
+                        <i class="fas fa-flag-checkered text-xl"></i>
+                    </div>
+                    <h3 class="text-xl font-semibold mb-4 text-center">終了時のアクション設定（5分）</h3>
+                    <ul class="space-y-2">
+                        <li class="flex items-start">
+                            <i class="fas fa-target text-blue-500 mr-2 mt-1"></i>
+                            <span>「明日からやること」を1つ決める</span>
+                        </li>
+                        <li class="flex items-start">
+                            <i class="fas fa-tasks text-purple-500 mr-2 mt-1"></i>
+                            <span>次回までの実践課題設定</span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <!-- Evaluation Methods -->
+        <section class="mb-16">
+            <div class="text-center mb-12">
+                <h2 class="text-4xl font-bold text-gray-800 mb-4">実践成果の測定方法</h2>
+                <div class="progress-bar w-32 mx-auto"></div>
+            </div>
+
+            <div class="grid grid-cols-1 lg:grid-cols-3 gap-8">
+                <div class="bg-white rounded-xl shadow-lg p-8 card-hover">
+                    <div class="icon-circle bg-gradient-to-r from-blue-400 to-indigo-500">
+                        <i class="fas fa-chart-line text-xl"></i>
+                    </div>
+                    <h3 class="text-xl font-semibold mb-4 text-center text-blue-600">定量的指標</h3>
+                    <ul class="space-y-3">
+                        <li class="flex items-start">
+                            <i class="fas fa-clock text-blue-500 mr-2 mt-1"></i>
+                            <span class="text-sm">特定タスクの実行時間短縮（コード作成、バグ修正など）</span>
+                        </li>
+                        <li class="flex items-start">
+                            <i class="fas fa-chart-bar text-green-500 mr-2 mt-1"></i>
+                            <span class="text-sm">AI活用頻度の増加</span>
+                        </li>
+                        <li class="flex items-start">
+                            <i class="fas fa-sync text-purple-500 mr-2 mt-1"></i>
+                            <span class="text-sm">新機能開発のサイクル時間</span>
+                        </li>
+                    </ul>
+                </div>
+
+                <div class="bg-white rounded-xl shadow-lg p-8 card-hover">
+                    <div class="icon-circle bg-gradient-to-r from-green-400 to-teal-500">
+                        <i class="fas fa-heart text-xl"></i>
+                    </div>
+                    <h3 class="text-xl font-semibold mb-4 text-center text-green-600">定性的指標</h3>
+                    <ul class="space-y-3">
+                        <li class="flex items-start">
+                            <i class="fas fa-lightbulb text-yellow-500 mr-2 mt-1"></i>
+                            <span class="text-sm">「AI使えば解決できそう」という発想の変化</span>
+                        </li>
+                        <li class="flex items-start">
+                            <i class="fas fa-graduation-cap text-blue-500 mr-2 mt-1"></i>
+                            <span class="text-sm">学習意欲・新技術への関心の向上</span>
+                        </li>
+                        <li class="flex items-start">
+                            <i class="fas fa-share-alt text-green-500 mr-2 mt-1"></i>
+                            <span class="text-sm">チーム内でのAI活用事例共有</span>
+                        </li>
+                    </ul>
+                </div>
+
+                <div class="bg-white rounded-xl shadow-lg p-8 card-hover">
+                    <div class="icon-circle bg-gradient-to-r from-purple-400 to-pink-500">
+                        <i class="fas fa-hands-helping text-xl"></i>
+                    </div>
+                    <h3 class="text-xl font-semibold mb-4 text-center text-purple-600">継続学習のサポート</h3>
+                    <ul class="space-y-3">
+                        <li class="flex items-start">
+                            <i class="fas fa-calendar text-purple-500 mr-2 mt-1"></i>
+                            <span class="text-sm">月1回のフォローアップ勉強会</span>
+                        </li>
+                        <li class="flex items-start">
+                            <i class="fas fa-comments text-blue-500 mr-2 mt-1"></i>
+                            <span class="text-sm">Slackでの活用事例共有チャンネル</span>
+                        </li>
+                        <li class="flex items-start">
+                            <i class="fas fa-newspaper text-green-500 mr-2 mt-1"></i>
+                            <span class="text-sm">最新AI情報のキャッチアップ方法</span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <!-- Expected Outcomes -->
+        <section class="mb-16">
+            <div class="text-center mb-12">
+                <h2 class="text-4xl font-bold text-gray-800 mb-4">期待される成果</h2>
+                <div class="progress-bar w-32 mx-auto"></div>
+            </div>
+
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-8">
+                <div class="bg-gradient-to-br from-blue-50 to-indigo-100 rounded-xl p-8 border border-blue-200">
+                    <h3 class="text-2xl font-bold text-blue-800 mb-6 flex items-center">
+                        <i class="fas fa-user text-3xl mr-4"></i>
+                        3ヶ月後の姿
+                    </h3>
+                    <div class="space-y-4">
+                        <div class="flex items-start">
+                            <div class="w-3 h-3 bg-blue-500 rounded-full mt-2 mr-3 flex-shrink-0"></div>
+                            <span>開発業務の30-50%でAIを自然に活用</span>
+                        </div>
+                        <div class="flex items-start">
+                            <div class="w-3 h-3 bg-blue-500 rounded-full mt-2 mr-3 flex-shrink-0"></div>
+                            <span>プロンプト設計スキルで高品質な回答を引き出せる</span>
+                        </div>
+                        <div class="flex items-start">
+                            <div class="w-3 h-3 bg-blue-500 rounded-full mt-2 mr-3 flex-shrink-0"></div>
+                            <span>チーム内でのAI活用推進役になれる</span>
+                        </div>
+                        <div class="flex items-start">
+                            <div class="w-3 h-3 bg-blue-500 rounded-full mt-2 mr-3 flex-shrink-0"></div>
+                            <span>新しいAIツールも自力で習得できる基礎力</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="bg-gradient-to-br from-green-50 to-teal-100 rounded-xl p-8 border border-green-200">
+                    <h3 class="text-2xl font-bold text-green-800 mb-6 flex items-center">
+                        <i class="fas fa-users text-3xl mr-4"></i>
+                        組織への波及効果
+                    </h3>
+                    <div class="space-y-4">
+                        <div class="flex items-start">
+                            <div class="w-3 h-3 bg-green-500 rounded-full mt-2 mr-3 flex-shrink-0"></div>
+                            <span>開発チーム全体の生産性向上</span>
+                        </div>
+                        <div class="flex items-start">
+                            <div class="w-3 h-3 bg-green-500 rounded-full mt-2 mr-3 flex-shrink-0"></div>
+                            <span>技術的な課題解決スピードの向上</span>
+                        </div>
+                        <div class="flex items-start">
+                            <div class="w-3 h-3 bg-green-500 rounded-full mt-2 mr-3 flex-shrink-0"></div>
+                            <span>イノベーションに対する意識変化</span>
+                        </div>
+                        <div class="flex items-start">
+                            <div class="w-3 h-3 bg-green-500 rounded-full mt-2 mr-3 flex-shrink-0"></div>
+                            <span>他部署へのAI活用拡大のきっかけ</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="gradient-bg text-white py-12">
+        <div class="container mx-auto px-6 text-center">
+            <div class="fade-in">
+                <h2 class="text-3xl font-bold mb-4">
+                    <i class="fas fa-rocket mr-2"></i>
+                    明日から変わるエンジニアライフを始めよう
+                </h2>
+                <p class="text-xl mb-8">実践重視のカリキュラムで、生成AIを業務の一部にして開発効率を劇的に向上させましょう</p>
+                <div class="flex justify-center space-x-8 text-lg">
+                    <div class="flex items-center">
+                        <i class="fas fa-clock mr-2"></i>
+                        <span>3ヶ月・6回</span>
+                    </div>
+                    <div class="flex items-center">
+                        <i class="fas fa-users mr-2"></i>
+                        <span>実践重視</span>
+                    </div>
+                    <div class="flex items-center">
+                        <i class="fas fa-chart-line mr-2"></i>
+                        <span>効果測定</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Smooth animations on scroll
+        const observerOptions = {
+            threshold: 0.1,
+            rootMargin: '0px 0px -50px 0px'
+        };
+
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('fade-in');
+                }
+            });
+        }, observerOptions);
+
+        // Observe all cards and sections
+        document.querySelectorAll('.card-hover, section > div').forEach(el => {
+            observer.observe(el);
+        });
+
+        // Add pulse animation to important elements
+        document.querySelectorAll('.icon-circle').forEach(el => {
+            el.addEventListener('mouseenter', () => {
+                el.classList.add('pulse-animation');
+            });
+            el.addEventListener('mouseleave', () => {
+                el.classList.remove('pulse-animation');
+            });
+        });
+
+        // Progress bar animation
+        window.addEventListener('load', () => {
+            document.querySelectorAll('.progress-bar').forEach(bar => {
+                bar.style.transform = 'scaleX(0)';
+                bar.style.transformOrigin = 'left';
+                bar.style.transition = 'transform 1s ease-out';
+                setTimeout(() => {
+                    bar.style.transform = 'scaleX(1)';
+                }, 300);
+            });
+        });
+    </script>
 </body>
 </html>
